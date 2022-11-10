@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function hover(element) {
+  			element.setAttribute('src', 'resources/pose2v4.png');
+		}
+
+		function unhover(element) {
+ 			 element.setAttribute('src', 'resources/pose1v4.png');
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Andrew Qin</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="head flex white">
+		<!--- NAMETITLE-->
+		<div class="nametitle flex">
+			<h1 id="logo"><strong>AQ<span style="color: #f4a261">.</span></strong></h1>
+
+		</div>
+		<!---HOMEBAR-->
+		<div class="homebar flex">
+			<div class="baritem" id="about">
+				<p><span style="color: #f4a261;">01.</span> about<p>
+			</div>
+			<div class="baritem" id="contact">
+				<p><span style="color: #f4a261;">02.</span> contact<p>
+			</div>
+			<div class="baritem" id="projects">
+				<p><span style="color: #f4a261;">03.</span> projects<p>
+			</div>
+			<div class="baritem" id="cv">
+				<p><span style="color: #f4a261;">04.</span> cv</p>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="about flex white">
+			<img id="portrait" src="resources/pose1v4.png" onmouseover="hover(this);" onmouseout="unhover(this);"> 
+
+			<div class="description">
+				<p id="intro">hello, my name is</p>
+				<h3 id="name"><strong>andrew qin<span style="color:#f4a261;">.</span></strong></h3>
+
+				<p id="iam">i am a <span style="color:#f4a261;">software developer</span></p>
+				<p id="aboutdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+				<div class="logos flex">
+					<img class="languagelogo" src="resources/javaclear.png">
+					<img class="languagelogo" src="resources/pythonclear.png">
+					<img class="languagelogo" src="resources/htmlclear.png">
+					<img class="languagelogo" src="resources/cssclear.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="projects">
+			<div class="projectstitle flex white">
+				<h1 id="myprojects"><strong>check out my projects</strong></h1>
+			</div>
+		</div>
+		<div class="gallery flex">
+			<div class="section1 flex "> hey </div>
+			<div class="section2 flex"> hoo </div>
+			<div class="section3 flex"> haa </div>
+			<div class="section4 flex"> hee </div>
+		</div>
+	</section>
+</body>
+</html>
