@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>andrewqin.dev</title>
 	<script type="text/javascript">
 		function hover(element) {
   			element.setAttribute('src', 'resources/pose2v4.png');
@@ -8,6 +9,10 @@
 
 		function unhover(element) {
  			 element.setAttribute('src', 'resources/pose1v4.png');
+		}
+		function scroll_to(id) {
+			let y = document.getElementById(id).offsetTop - 0.2*window.innerWidth;
+			window.scrollTo({top: y, left: 0, behavior: 'smooth'});
 		}
 	</script>
 	<meta charset="utf-8">
@@ -27,29 +32,29 @@
 		</div>
 		<!---HOMEBAR-->
 		<div class="homebar flex">
-			<div class="baritem" id="about">
+			<div class="baritem" id="about" onclick="scroll_to('about-container')">
 				<p><span style="color: #f4a261;">01.</span> about<p>
 			</div>
+			<div class="baritem" id="projects" onclick="scroll_to('myprojects')">
+				<p><span style="color: #f4a261;">02.</span> projects<p>
+			</div>
+			<div class="baritem" id="cv" onclick="scroll_to('cvbox')">
+				<p><span style="color: #f4a261;">03.</span> cv</p>
+			</div>
 			<div class="baritem" id="contact">
-				<p><span style="color: #f4a261;">02.</span> contact<p>
-			</div>
-			<div class="baritem" id="projects">
-				<p><span style="color: #f4a261;">03.</span> projects<p>
-			</div>
-			<div class="baritem" id="cv">
-				<p><span style="color: #f4a261;">04.</span> cv</p>
+				<p><span style="color: #f4a261;">04.</span> contact<p>
 			</div>
 		</div>
 	</header>
 	<section>
-		<div class="about flex white">
+		<div class="about flex white" id="about-container">
 			<img id="portrait" src="resources/pose1v4.png" onmouseover="hover(this);" onmouseout="unhover(this);"> 
 
 			<div class="description">
 				<p id="intro">hello, my name is</p>
 				<h3 id="name"><strong>andrew qin<span style="color:#f4a261;">.</span></strong></h3>
 
-				<p id="iam">i am a <span style="color:#f4a261;">software developer</span></p>
+				<p id="iam">i am a <span style="color:#f4a261;" id="changing-iam">software developer</span></p>
 				<p id="aboutdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -63,11 +68,12 @@
 					<img class="languagelogo" src="resources/pythonclear.png">
 					<img class="languagelogo" src="resources/htmlclear.png">
 					<img class="languagelogo" src="resources/cssclear.png">
+					<img class="languagelogo" src="resources/jslogo.png">
 				</div>
 			</div>
 		</div>
 
-		<div class="projects">
+		<div class="projects" id="projects-container">
 			<div class="projectstitle flex white">
 				<h1 id="myprojects"><strong>check out my projects</strong></h1>
 			</div>
@@ -78,6 +84,65 @@
 			<div class="section3 flex box"> haa </div>
 			<div class="section4 flex box"> hee </div>
 		</div>
+		<div class="cv flex white">
+			<div id="cvbox">
+				<div id="downloadtitle">
+					download my cv 
+				</div>
+				<div id="filesize">
+				(69kb)
+				</div>
+			</div>
+		</div>
+		<div id="contact-container" class="contact">
+			<div>
+				let's get in touch!
+				gmail
+				insta
+				linkedin
+				github
+			</div>
+		</div>
+
+		<!--
+		<div class="contact white">
+			<p>github</p>
+			<p>linkedin</p>
+			<p>gmail</p>
+			<p>insta</p>
+		</div>
+		-->
 	</section>
+	<script>
+		let text_index = 0;
+		let char_index = 0;
+		let changing_texts = ["software developer", "website designer", "competitive programmer"];
+		let changing = document.getElementById("changing-iam");
+		changing.innerText = '';
+		function add_char() {
+			let current_text = changing_texts[text_index];
+			if (char_index === current_text.length) {
+				char_index = 0;
+				text_index++;
+				changing.innerText = '';
+				if (text_index === changing_texts.length) {
+					text_index = 0;
+				}
+				current_text = changing_texts[text_index];
+			}
+			let space_behind = false;
+			if (char_index !== 0) {
+				if (current_text[char_index-1] === ' ') {
+					space_behind = true;
+					changing.innerText += ' '+current_text[char_index];
+				}
+			}
+			if (!space_behind) {
+				changing.innerText += current_text[char_index];
+			}
+			char_index++;
+		}
+		setInterval(function() {add_char()}, 250);
+	</script>
 </body>
 </html>

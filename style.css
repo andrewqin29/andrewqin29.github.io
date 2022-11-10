@@ -31,6 +31,7 @@ body {
 #logo {
 	font-size: min(4vw,35px);
 	margin: 0;
+
 }
 #title {
 	font-size: min(1vw,12px);
@@ -124,7 +125,7 @@ body {
 /**GALLERY**/
 .gallery {
 	justify-content: space-evenly;
-	height: 200px;
+	height: 25vw;
 }
 
 .section1 {
@@ -152,10 +153,43 @@ body {
 .box {
 	align-items: center;
 	justify-content: center;
-	height: 150px;
 	background-color: #f4a261;;
+	box-shadow: 10px 10px #e85d04;
+	border: 2px solid #161a1d;
+	height: 15vw;
 }
 
+.box:hover {
+	transform: translateY(10px);
+}
+
+/**CV**/
+
+.cv {
+	margin: 10vw 0vw 0vw 0vw;
+	height: 30vw;
+	align-items: center;
+	justify-content: center;
+	background-color: #161a1d;
+	
+}
+#cvbox{
+	padding: 3vw 5vw 3vw 5vw;
+	border: 2px solid white;
+	color: #f4a261;
+	font-size: 1.5vw;
+	justify-content: center;
+}
+
+#cvbox:hover {
+	border: 2px solid #f4a261;
+	color: white;
+	background-color: #f4a261;
+}
+
+#filesize{
+	font-size: 1vw;
+}
 
 
 
