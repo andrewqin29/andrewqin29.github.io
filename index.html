@@ -41,7 +41,7 @@
 			<div class="baritem" id="cv" onclick="scroll_to('cvbox')">
 				<p><span style="color: #f4a261;">03.</span> cv</p>
 			</div>
-			<div class="baritem" id="contact">
+			<div class="baritem" id="contact" onclick="scroll_to('contact-container')">
 				<p><span style="color: #f4a261;">04.</span> contact<p>
 			</div>
 		</div>
@@ -94,24 +94,24 @@
 				</div>
 			</div>
 		</div>
-		<div id="contact-container" class="contact">
-			<div>
-				let's get in touch!
-				gmail
-				insta
-				linkedin
-				github
+		<div id="contact-container" class="flex">
+			<div class="contact-item flex white">
+				<img class="contactlogo" src="resources/gmaillogo.png">
+				<p>GM</p>
+			</div>
+			<div class="contact-item flex white">
+				<img class="contactlogo" src="resources/linkedinlogov2.png">
+				<p>LI</p>
+			</div>
+			<div class="contact-item flex white">
+				<img class="contactlogo" src="resources/instalogo.png">
+				<p>IG</p>
+			</div>
+			<div class="contact-item flex white">
+				<img class="contactlogo" src="resources/githublogov2.png">
+				<p>GH</p>
 			</div>
 		</div>
-
-		<!--
-		<div class="contact white">
-			<p>github</p>
-			<p>linkedin</p>
-			<p>gmail</p>
-			<p>insta</p>
-		</div>
-		-->
 	</section>
 	<script>
 		let text_index = 0;

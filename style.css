@@ -191,5 +191,24 @@ body {
 	font-size: 1vw;
 }
 
+/**CONTACT**/
+#contact-container {
+	justify-content: space-evenly;
+	align-items: center;
+	height: 10vh;
+}
+.contactlogo {
+	max-height: 2vw;
+	max-width: 3vw;
+	width: auto;
+	height: auto;
+	margin-right: 1vw;
+}
 
-
+.contact-item {
+	align-items: center;
+	justify-content: center;
+}
+.contact-item:hover {
+	text-decoration: underline;
+}
