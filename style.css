@@ -1,7 +1,9 @@
 body {
 	font-family: 'JetBrains Mono', monospace;;
 	margin: 0;
-	background-color: #212529;
+	/**background-color: #212529;**/
+	background-image: url('resources/background2.png');
+	background-size: 150px 150px;
 }
 
 .head {
@@ -47,7 +49,7 @@ body {
 
 .baritem {
 	margin-right: 7vw;
-	font-size: min(15px,2vw);
+	font-size: min(1.5vw,20px)
 }
 .baritem:hover {
 	text-decoration: underline;
@@ -112,7 +114,7 @@ body {
 
 /** PROJECTS **/
 .projects {
-	
+	background-color: #212529;
 }
 .projectstitle {
 	justify-content: center;
@@ -126,6 +128,7 @@ body {
 .gallery {
 	justify-content: space-evenly;
 	height: 25vw;
+	background-color: #212529;
 }
 
 .section1 {
@@ -171,6 +174,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #161a1d;
+
 	
 }
 #cvbox{
@@ -179,6 +183,7 @@ body {
 	color: #f4a261;
 	font-size: 1.5vw;
 	justify-content: center;
+
 }
 
 #cvbox:hover {
@@ -195,7 +200,8 @@ body {
 #contact-container {
 	justify-content: space-evenly;
 	align-items: center;
-	height: 10vh;
+	height: 15vh;
+	background-color: #212529;
 }
 .contactlogo {
 	max-height: 2vw;
@@ -211,4 +217,8 @@ body {
 }
 .contact-item:hover {
 	text-decoration: underline;
+}
+.link {
+	color: white;
+	text-decoration: none;
 }
