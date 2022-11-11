@@ -155,7 +155,7 @@ body {
 
 .box {
 	align-items: center;
-	justify-content: center;
+	/**justify-content: center;**/
 	background-color: #f4a261;;
 	box-shadow: 10px 10px #e85d04;
 	border: 2px solid #161a1d;
@@ -165,6 +165,24 @@ body {
 .box:hover {
 	transform: translateY(10px);
 }
+
+.gallery-text-container {
+	margin: 1vh 1vw 1vh 1vw;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.project-header {
+	justify-content: space-between;
+	font-size: 1.5vw;
+}
+
+.project-desc {
+	font-size: 0.9vw;
+}
+
+
+
 
 /**CV**/
 

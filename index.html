@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>andrewqin.dev</title>
+	<link rel="icon" type="image/x-icon" href="resources/favicon.png">
 	<script type="text/javascript">
 		function hover(element) {
-  			element.setAttribute('src', 'resources/pose2v4.png');
+  			element.setAttribute('src', 'resources/pose2v5.png');
 		}
 
 		function unhover(element) {
- 			 element.setAttribute('src', 'resources/pose1v4.png');
+ 			 element.setAttribute('src', 'resources/pose1v5.png');
 		}
 		function scroll_to(id) {
 			let y = document.getElementById(id).offsetTop - 0.2*window.innerWidth;
@@ -48,7 +49,7 @@
 	</header>
 	<section>
 		<div class="about flex white" id="about-container">
-			<img id="portrait" src="resources/pose1v4.png" onmouseover="hover(this);" onmouseout="unhover(this);"> 
+			<img id="portrait" src="resources/pose1v5.png" onmouseover="hover(this);" onmouseout="unhover(this);"> 
 
 			<div class="description">
 				<p id="intro">hello, my name is</p>
@@ -79,10 +80,52 @@
 			</div>
 		</div>
 		<div class="gallery flex">
-			<div class="section1 flex box"> hey </div>
-			<div class="section2 flex box"> hoo </div>
-			<div class="section3 flex box"> haa </div>
-			<div class="section4 flex box"> hee </div>
+			<div class="section1 box">
+				<div class="gallery-text-container flex">
+					<a href="https://github.com/andrewqin29/LifeGUI.git" style="text-decoration:none">
+						<div class="project-header flex">
+							<div class="project-title">
+								<span style="text-decoration: underline; color:black"><strong>Life</strong></span>
+							</div>
+							<div class="project-type white">
+								[sim]
+							</div>
+						</div>
+						<p class="project-desc" style="color: black;">An interactive, sandbox simulator of Conway's Game of Life. Developed using the JavaFX platform for APCS class. The simulator allows you to create custom patterns, speed up generations, and save progress.</p>
+					</a>
+				</div> 			
+			</div>
+			<div class="section2 flex box"> 
+				<div class="gallery-text-container flex">
+					<a href="https://github.com/andrewqin29/Asteroids.git" style="text-decoration:none">
+						<div class="project-header flex">
+							<div class="project-title">
+								<span style="text-decoration: underline; color:black"><strong>Asteroids</strong></span>
+							</div>
+							<div class="project-type white">
+								[game]
+							</div>
+						</div>
+						<p class="project-desc" style="color: black;">A modern spin on the classical arcade game Asteroids using JavaFX. Includes new weapons, mechanics, sprites and refined features. Super fun to play and seriously addicting!</p>
+					</a>
+				</div> 		
+			</div>
+			<div class="section3 flex box"> 
+				<div class="gallery-text-container flex">
+					<a href="https://github.com/andrewqin29/BWSI-Clownfish.git" style="text-decoration:none">
+						<div class="project-header flex">
+							<div class="project-title">
+								<span style="text-decoration: underline; color:black"><strong>BWSI AUVC</strong></span>
+							</div>
+							<div class="project-type white">
+								[sim]
+							</div>
+						</div>
+						<p class="project-desc" style="color: black;">Group project for team Clownfish of the AUVC challenge @ MIT’s 2022 BWSI summer program. The program simulates an AUV's behavior in an aquatic environment. Built with C++, Shell and CMake.</p>
+					</a>
+				</div> 	
+			</div>
+			<div class="section4 flex box"> work in progress... </div>
 		</div>
 		<div class="cv flex white">
 			<div id="cvbox">
