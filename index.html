@@ -3,19 +3,6 @@
 <head>
 	<title>andrewqin.dev</title>
 	<link rel="icon" type="image/x-icon" href="resources/favicon.png">
-	<script type="text/javascript">
-		function hover(element) {
-  			element.setAttribute('src', 'resources/pose2v5.png');
-		}
-
-		function unhover(element) {
- 			 element.setAttribute('src', 'resources/pose1v5.png');
-		}
-		function scroll_to(id) {
-			let y = document.getElementById(id).offsetTop - 0.2*window.innerWidth;
-			window.scrollTo({top: y, left: 0, behavior: 'smooth'});
-		}
-	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Andrew Qin</title>
@@ -56,14 +43,9 @@
 				<h3 id="name"><strong>andrew qin<span style="color:#f4a261;">.</span></strong></h3>
 
 				<p id="iam">i am a <span style="color:#f4a261;" id="changing-iam">software developer</span></p>
-				<p id="aboutdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+				<p id="aboutdesc">Owning the world and crushing obstacles since December, 2005! I am currently a Junior at Cupertino High School with a keen interest in software development specifically in the fields of robotics, web development and space exploration. Outside of academics, I am an avid soccer fan and player <span style="color:#f4a261"> <</span>Go Red Devils!<span style="color:#f4a261">></span>. I also enjoy going on runs, playing Xbox and collecting vintage comic books.<br>
+				<br>
+				Currently learning back end web dev, EE/circuitry and how to tie my shoes. </p>
 				<div class="logos flex">
 					<img class="languagelogo" src="resources/javaclear.png">
 					<img class="languagelogo" src="resources/pythonclear.png">
@@ -125,7 +107,9 @@
 					</a>
 				</div> 	
 			</div>
-			<div class="section4 flex box"> work in progress... </div>
+			<div class="section4 flex box"> 
+				<p class="project-desc">work in progress... </p>
+			</div>
 		</div>
 		<div class="cv flex white">
 			<div id="cvbox">
@@ -156,36 +140,6 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		let text_index = 0;
-		let char_index = 0;
-		let changing_texts = ["software developer", "website designer", "competitive programmer"];
-		let changing = document.getElementById("changing-iam");
-		changing.innerText = '';
-		function add_char() {
-			let current_text = changing_texts[text_index];
-			if (char_index === current_text.length) {
-				char_index = 0;
-				text_index++;
-				changing.innerText = '';
-				if (text_index === changing_texts.length) {
-					text_index = 0;
-				}
-				current_text = changing_texts[text_index];
-			}
-			let space_behind = false;
-			if (char_index !== 0) {
-				if (current_text[char_index-1] === ' ') {
-					space_behind = true;
-					changing.innerText += ' '+current_text[char_index];
-				}
-			}
-			if (!space_behind) {
-				changing.innerText += current_text[char_index];
-			}
-			char_index++;
-		}
-		setInterval(function() {add_char()}, 250);
-	</script>
 </body>
+<script src="index.js"></script>
 </html>
