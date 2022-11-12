@@ -33,7 +33,7 @@ function hover(element) {
 }
 
 function unhover(element) {
-        element.setAttribute('src', 'resources/pose1v5.png');
+     element.setAttribute('src', 'resources/pose1v5.png');
 }
 function scroll_to(id) {
     let y = document.getElementById(id).offsetTop - 0.2*window.innerWidth;
